@@ -59,6 +59,8 @@ public class SelectPlayer : MonoBehaviour {
     private void LoadResources()
     {
         changePress = false;
+
+        //BIKE 1 COMEÇA SETADA
         CurrentBike = bikeFirst;     
     }
 
@@ -70,7 +72,7 @@ public class SelectPlayer : MonoBehaviour {
         
     }
 
-
+    //AQUI VAI DECIDIR QUAL BIKE FICA 
    private void ChangeBike()
     {
         if (CurrentBike == bikeFirst)
@@ -96,12 +98,12 @@ public class SelectPlayer : MonoBehaviour {
         }
     }
 
-
+   
     private GameObject VerifyBike()
     {
         if (CurrentBike == bikeFirst)
         {
-
+            
             return bikeFirst;
         }
         else if (CurrentBike == bikeSecond)
