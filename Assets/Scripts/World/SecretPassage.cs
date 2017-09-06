@@ -23,8 +23,12 @@ public class SecretPassage : MonoBehaviour {
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(0.3f);
-        //criando efeito de particula
-        SpecialEffect.Instance.Explosion(transform.position);
+
+
+        if (BrokeEffect != null)
+        {
+            SpecialEffect.Instance.Explosion(transform.position);
+        }
         Destroy(gameObject);
        
     }

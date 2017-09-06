@@ -32,12 +32,12 @@ public class LoadLevels : MonoBehaviour {
    
     public void L1Press()
     {
-        SceneManager.LoadScene("DEMO 1");
+        SceneManager.LoadScene("L1");
     }
 
     public void L2Press()
     {
-        SceneManager.LoadScene("DEMO 2");
+        SceneManager.LoadScene("L2");
     }
 
 

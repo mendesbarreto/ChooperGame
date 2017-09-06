@@ -10,15 +10,20 @@ public class Win : MonoBehaviour {
     [SerializeField]
     private Canvas WinScreen;
 
-    public Button dayTimeButton;
-    public Button nocturneButton;
+    [SerializeField]
+    private float WinPosition;
+
+
+
+    public Button continueButton;
+    public Button restartButton;
 
 
     private void Start()
     {
         WinScreen.enabled = false;
-        dayTimeButton = dayTimeButton.GetComponent<Button>();
-        nocturneButton = nocturneButton.GetComponent<Button>();
+        continueButton = continueButton.GetComponent<Button>();
+        restartButton = restartButton.GetComponent<Button>();
         Time.timeScale = 1.0f;
 
     }
@@ -26,7 +31,7 @@ public class Win : MonoBehaviour {
 
      void Update () {
 	
-        if (Player.transform.position.x >= 51.50f)
+        if (Player.transform.position.x >=WinPosition)
         {
             Time.timeScale = 0.0f;
             WinScreen.enabled = true;
@@ -39,14 +44,15 @@ public class Win : MonoBehaviour {
 
 
 
-    public void DaytimeGame()
+    public void ContinueGame()
     {
-        SceneManager.LoadScene("Demo2");
+        SceneManager.LoadScene("SelectLevel");
     }
 
-    public void NocturneGame()
+    public void RestartGame()
     {
-        SceneManager.LoadScene("DemoNoturne");
+        //SceneManager.LoadScene("DemoNoturne");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }

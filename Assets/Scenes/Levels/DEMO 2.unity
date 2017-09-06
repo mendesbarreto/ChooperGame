@@ -817,7 +817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114310249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,6 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1389197533}
   WinScreen: {fileID: 114310252}
+  WinPosition: 0
   dayTimeButton: {fileID: 1342727428}
   nocturneButton: {fileID: 223284828}
 --- !u!114 &114310250

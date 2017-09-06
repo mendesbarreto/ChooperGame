@@ -1573,6 +1573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 31098564}
   WinScreen: {fileID: 1052735081}
+  WinPosition: 0
   dayTimeButton: {fileID: 440249100}
   nocturneButton: {fileID: 1279157239}
 --- !u!114 &1052735079
