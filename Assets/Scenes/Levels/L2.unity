@@ -262,6 +262,7 @@ MonoBehaviour:
   Player: {fileID: 633032192}
   WinScreen: {fileID: 177233363}
   WinPosition: 52.64
+  LevelNumber: 1
   continueButton: {fileID: 232465800}
   restartButton: {fileID: 108141310}
 --- !u!114 &177233361

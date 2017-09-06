@@ -15,8 +15,26 @@ public class Win : MonoBehaviour {
 
 
 
-    public Button continueButton;
-    public Button restartButton;
+    [SerializeField]
+    private int LevelNumber;
+
+
+
+    public Button ContinueButton
+    {
+        get { return continueButton; }
+        set { continueButton = value; }
+    }
+    [SerializeField]
+    private Button continueButton;
+
+    public Button RestartButton
+    {
+        get { return restartButton; }
+        set { restartButton = value; }
+    }
+    [SerializeField]
+    private Button restartButton;
 
 
     private void Start()
@@ -33,15 +51,16 @@ public class Win : MonoBehaviour {
 	
         if (Player.transform.position.x >=WinPosition)
         {
+            if (LevelControlers.instance._levels[LevelNumber + 1] == 0 && LevelNumber < 12)
+            {
+                LevelControlers.instance._levels[LevelNumber + 1] = 1;
+                PlayerPrefs.SetInt("Levels " + (LevelNumber + 1), LevelControlers.instance._levels[LevelNumber + 1]);
+            }
             Time.timeScale = 0.0f;
             WinScreen.enabled = true;
         }	
 
 	}
-
-          
-       
-
 
 
     public void ContinueGame()
