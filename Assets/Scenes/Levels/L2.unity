@@ -1249,7 +1249,7 @@ Prefab:
     - target: {fileID: 114602174755733566, guid: 5e95e89ade04e9a4d82d8607879a108f,
         type: 2}
       propertyPath: EnablePcController
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e95e89ade04e9a4d82d8607879a108f, type: 2}
