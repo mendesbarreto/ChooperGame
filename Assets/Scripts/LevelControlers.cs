@@ -4,8 +4,22 @@ using UnityEngine;
 
 public class LevelControlers : MonoBehaviour {
 
-    public int[] _levels = new int[12];
 
+    public int[] Levels 
+    {
+        get { return levels;}
+        set { levels = value; }
+    }
+    [SerializeField]
+    public int[] levels = new int[12];
+
+
+    public string LevelsKey 
+     {
+        get { return levelsKey;}
+    }
+    [SerializeField]
+    private const string levelsKey = "Levels ";
 
     public static LevelControlers instance;
 
@@ -25,20 +39,20 @@ public class LevelControlers : MonoBehaviour {
 
     private void LoadResources()
     {
-        _levels[0] = 1;
+        levels[0] = 1;
 
 
         for (int i = 0; i < 12; i++)
         {
 
             // PARA CADA FASE
-            if (PlayerPrefs.HasKey("Levels " + i))
+            if (PlayerPrefs.HasKey(LevelsKey + i))
             {
-                _levels[i] = PlayerPrefs.GetInt("Levels " + i);
+                levels[i] = PlayerPrefs.GetInt(LevelsKey + i);
             }
             else
             {
-                PlayerPrefs.SetInt("Levels " + i, _levels[i]);
+                PlayerPrefs.SetInt(LevelsKey + i, levels[i]);
             }
         }
     }

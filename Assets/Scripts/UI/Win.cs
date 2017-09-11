@@ -60,10 +60,10 @@ public class Win : MonoBehaviour {
 	
         if (Player.transform.position.x >=WinPosition)
         {
-            if (LevelControlers.instance._levels[LevelNumber + 1] == 0 && LevelNumber < 12)
+            if (LevelControlers.instance.levels[LevelNumber + 1] == 0 && LevelNumber < 12)
             {
-                LevelControlers.instance._levels[LevelNumber + 1] = 1;
-                PlayerPrefs.SetInt("Levels " + (LevelNumber + 1), LevelControlers.instance._levels[LevelNumber + 1]);
+                LevelControlers.instance.levels[LevelNumber + 1] = 1;
+                PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.levels[LevelNumber + 1]);
             }
             Time.timeScale = 0.0f;
             menuButton.enabled = false;
@@ -80,7 +80,6 @@ public class Win : MonoBehaviour {
 
     public void RestartGame()
     {
-        //SceneManager.LoadScene("DemoNoturne");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

@@ -21,7 +21,7 @@ public class UnlockLevels : MonoBehaviour {
     {
        
 
-        if (LevelControlers.instance._levels[CurrentLevel] == 1)
+        if (LevelControlers.instance.levels[CurrentLevel] == 1)
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Button>().interactable = true;
