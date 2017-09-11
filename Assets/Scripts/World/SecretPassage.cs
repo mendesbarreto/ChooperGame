@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecretPassage : MonoBehaviour {
+public sealed class SecretPassage : MonoBehaviour {
 
     [SerializeField]
     private string objectTag;
@@ -16,23 +16,15 @@ public class SecretPassage : MonoBehaviour {
         {
             StartCoroutine("ExplosionAct");
         }
-
     }
     
-
     IEnumerator ExplosionAct()
     {
         yield return new WaitForSeconds(0.3f);
-
-
         if (BrokeEffect != null)
         {
             SpecialEffect.Instance.Explosion(transform.position);
         }
         Destroy(gameObject);
-       
-    }
-
-
-   
+    } 
 }

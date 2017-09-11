@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BGEffect : MonoBehaviour {
+public sealed class BGEffect : MonoBehaviour {
 
 
     [SerializeField]
@@ -13,13 +13,13 @@ public class BGEffect : MonoBehaviour {
 
     private void Update()
     {
-
-         transform.position = new Vector2(-21.8f + (-Camera.transform.position.x / speedCenario), -0.4846725f + ((-Camera.transform.position.y / speedCenario))); 
-
-      
-
+        MoveBG();
     }
 
+    private void MoveBG()
+    {
+        transform.position = new Vector2(-21.8f + (-Camera.transform.position.x / speedCenario), -0.4846725f + ((-Camera.transform.position.y / speedCenario)));
+    }
 
 
 
