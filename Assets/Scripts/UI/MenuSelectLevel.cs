@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuSelectLevel : MonoBehaviour {
+public sealed class MenuSelectLevel : MonoBehaviour {
 
     public Button Menu
     {
@@ -17,16 +17,12 @@ public class MenuSelectLevel : MonoBehaviour {
     private void Start()
     {
         LoadResources();
-
-        
     }
-
 
     private void LoadResources()
     {
         Time.timeScale = 1.0f;
     }
-
 
     public void MenuPress()
     {

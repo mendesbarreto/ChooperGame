@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class Win : MonoBehaviour {
 
-    public GameObject Player;
+public sealed class Win : MonoBehaviour {
+
+    public GameObject Player
+    {
+        get { return player; }
+        set { player = value; }
+    }
+    [SerializeField]
+    private GameObject player;
 
     [SerializeField]
     private Canvas WinScreen;
@@ -13,12 +20,8 @@ public class Win : MonoBehaviour {
     [SerializeField]
     private float WinPosition;
 
-
-
     [SerializeField]
     private int LevelNumber;
-
-
 
     public Button ContinueButton
     {
@@ -36,7 +39,6 @@ public class Win : MonoBehaviour {
     [SerializeField]
     private Button restartButton;
 
-
     public Button MenuButton
     {
         get { return menuButton; }
@@ -45,33 +47,43 @@ public class Win : MonoBehaviour {
     [SerializeField]
     private Button menuButton;
 
-
     private void Start()
+    {
+        LoadResources();
+    }
+
+    private void LoadResources()
     {
         WinScreen.enabled = false;
         continueButton = continueButton.GetComponent<Button>();
         restartButton = restartButton.GetComponent<Button>();
         Time.timeScale = 1.0f;
-
     }
 
-
-     void Update () {
-	
-        if (Player.transform.position.x >=WinPosition)
-        {
-            if (LevelControlers.instance.Levels[LevelNumber + 1] == 0 && LevelNumber < 12)
-            {
-                LevelControlers.instance.Levels[LevelNumber + 1] = 1;
-                PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.Levels[LevelNumber + 1]);
-            }
-            Time.timeScale = 0.0f;
-            menuButton.enabled = false;
-            WinScreen.enabled = true;
-        }	
-
+     private void Update ()
+    {
+        VerifyPlayerPosition();
 	}
 
+    private void VerifyPlayerPosition()
+    {
+        if (player.transform.position.x >= WinPosition)
+        {
+            WhenPlayerWin();
+        }
+    }
+
+    private void WhenPlayerWin()
+    {
+        if (LevelControlers.instance.Levels[LevelNumber + 1] == 0 && LevelNumber < 12)
+        {
+            LevelControlers.instance.Levels[LevelNumber + 1] = 1;
+            PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.Levels[LevelNumber + 1]);
+        }
+        Time.timeScale = 0.0f;
+        menuButton.enabled = false;
+        WinScreen.enabled = true;
+    }
 
     public void ContinueGame()
     {

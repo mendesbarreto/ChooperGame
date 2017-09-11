@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7d6f356a6fd6544a0dfa59817ae004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 633032192}
+  player: {fileID: 633032192}
   WinScreen: {fileID: 177233363}
   WinPosition: 52.64
   LevelNumber: 1
@@ -655,8 +655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da8a2105a9d1d74ba250b520f1f17be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 0
-  sensitility: 50
 --- !u!114 &362167212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,8 +846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da8a2105a9d1d74ba250b520f1f17be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 0
-  sensitility: 50
 --- !u!114 &456841400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,8 +1723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da8a2105a9d1d74ba250b520f1f17be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 0
-  sensitility: 50
 --- !u!114 &962250738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,7 +1864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7912505, y: 0.84900004}
   m_AnchorMax: {x: 1, y: 0.9725835}
-  m_AnchoredPosition: {x: 160.49973, y: 4.999939}
+  m_AnchoredPosition: {x: 160.4997, y: 4.999939}
   m_SizeDelta: {x: 322.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1201713140
@@ -2910,8 +2904,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da8a2105a9d1d74ba250b520f1f17be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: 0
-  sensitility: 50
 --- !u!114 &1841560467
 MonoBehaviour:
   m_ObjectHideFlags: 0

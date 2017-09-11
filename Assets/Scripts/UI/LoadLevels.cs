@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LoadLevels : MonoBehaviour {
+public sealed class LoadLevels : MonoBehaviour {
 
-    //BOTOES
-
-    //1
+    //L1
     public Button Level1
     {
         get { return level1; }
@@ -17,7 +15,7 @@ public class LoadLevels : MonoBehaviour {
     [SerializeField]
     private Button level1;
     
-    //2
+    //L2
     public Button Level2
     {
         get { return level2; }
@@ -26,10 +24,7 @@ public class LoadLevels : MonoBehaviour {
     [SerializeField]
     private Button level2;
 
-
-
-    //FASES
-   
+   //LISTA
     public void L1Press()
     {
         SceneManager.LoadScene("L1");

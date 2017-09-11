@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectPlayer : MonoBehaviour {
-
+public sealed class SelectPlayer : MonoBehaviour {
+    
+    //BIKES
     public GameObject BikeFirst
     {
         get { return bikeFirst; }
@@ -31,7 +32,7 @@ public class SelectPlayer : MonoBehaviour {
 
     private GameObject CurrentBike;
 
-
+    //UI
     public Button Change
     {
         get { return change; }
@@ -40,31 +41,24 @@ public class SelectPlayer : MonoBehaviour {
     [SerializeField]
     private Button change;
 
+    //PROPRIEDADES
     private Vector3 ShowBike = new Vector3(4, -0.76f, 86);
     private Vector3 HiddenBike = new Vector3(15, -0.76f, 86);
-
-
     private bool changePress;
-
     [SerializeField]
     private float speedTranslate;
-
 
     private void Start()
     {
         LoadResources();
     }
 
-
     private void LoadResources()
     {
         changePress = false;
-
         //BIKE 1 COMEÇA SETADA
         CurrentBike = bikeFirst;    
-         
     }
-
 
     public void ChangePress()
     {
@@ -73,8 +67,16 @@ public class SelectPlayer : MonoBehaviour {
         
     }
 
+    private void Update()
+    {
+        if (changePress)
+        {
+            MoveMainBike(VerifyBike());
+        }
+    }
+
     //AQUI VAI DECIDIR QUAL BIKE FICA 
-   private void ChangeBike()
+    private void ChangeBike()
     {
         if (CurrentBike == bikeFirst)
         {
@@ -90,47 +92,33 @@ public class SelectPlayer : MonoBehaviour {
         }
     }
 
-
-    private void Update()
-    {
-        if (changePress)
-        {
-            MoveMainBike(VerifyBike());
-        }
-    }
-
-   
+   //VERIFICA BIKE SETADA
     private GameObject VerifyBike()
     {
         if (CurrentBike == bikeFirst)
-        {
-            
+        {  
             return bikeFirst;
         }
         else if (CurrentBike == bikeSecond)
         {
-
             return bikeSecond;
         }
         else
         {
-
             return bikeThird;
         }
 
 
     }
 
-
+    //MOVE PARA O PAINEL
     private void MoveMainBike(GameObject mainBike)
     {
         mainBike.transform.position = Vector3.Lerp(mainBike.transform.position, ShowBike, speedTranslate * Time.deltaTime);
-
         ReturnPosition(mainBike);
-
     }
 
-
+    //RETIRA DO PAINEL 
     private void ReturnPosition(GameObject mainBike)
     {
         if (mainBike != bikeFirst)
@@ -146,6 +134,5 @@ public class SelectPlayer : MonoBehaviour {
             bikeThird.transform.position = Vector3.Lerp(bikeThird.transform.position, HiddenBike, speedTranslate * Time.deltaTime);
         }
     }
-
 
 }

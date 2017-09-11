@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+public sealed class Hud : MonoBehaviour {
 
-public class Hud : MonoBehaviour {
     public Button Menu
     {
         get { return menu; }
@@ -13,8 +13,6 @@ public class Hud : MonoBehaviour {
     }
     [SerializeField]
     private Button menu;
-
-
 
     public void MenuPress()
     {

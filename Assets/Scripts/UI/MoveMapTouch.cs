@@ -5,27 +5,14 @@ using UnityEngine;
 public sealed class MoveMapTouch : MonoBehaviour {
 
     [SerializeField]
-    private float speed;
+    private const float speed = 0.01f;
     private Vector3 limiteRight = new Vector3(-1,0,0);
     private Vector3 limiteLeft = new Vector3(-19,0,0);
-
-   
-    private void Start()
-    {
-        LoadResources();  
-    }
-
-    private void LoadResources()
-    {
-        speed = 0.01f;
-    }
-
 
     private void Update()
     {
         MoveMap();
     }
-
 
     private void MoveMap()
     {
@@ -33,13 +20,11 @@ public sealed class MoveMapTouch : MonoBehaviour {
         {
             transform.position = Vector3.Lerp(transform.position, limiteRight, Time.deltaTime);
 
-        }
-        else if (transform.position.x < -20)
+        } else if (transform.position.x < -20)
         {
             transform.position = Vector3.Lerp(transform.position, limiteLeft, Time.deltaTime);
 
-        }
-        else
+        } else
         {
             if (Input.touchCount == 1)
             {
@@ -47,6 +32,5 @@ public sealed class MoveMapTouch : MonoBehaviour {
             }
         }
     }
-
 
 }

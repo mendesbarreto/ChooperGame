@@ -3,34 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UnlockLevels : MonoBehaviour {
-
-   /* public Button CurrentButton
-    {
-        get { return currentButton; }
-        set { currentButton = value; }
-    }
-    [SerializeField]
-    private Button currentButton;
-    */
+public sealed class UnlockLevels : MonoBehaviour {
     [SerializeField]
     private int CurrentLevel;
 
-
     private void Start()
     {
-       
+        VerifyLevel();
+    }
 
+    private void VerifyLevel()
+    {
         if (LevelControlers.instance.Levels[CurrentLevel] == 1)
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<Button>().interactable = true;
-           
         }
-
-
     }
-
-
 
 }

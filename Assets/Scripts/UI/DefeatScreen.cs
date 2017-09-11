@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class DefeatScreen : MonoBehaviour {
+public sealed class DefeatScreen : MonoBehaviour {
 
     public Button Menu
     {
@@ -21,7 +21,6 @@ public class DefeatScreen : MonoBehaviour {
     }
     [SerializeField]
     private Button restartButton;
-
 
     public void MenuPress()
     {

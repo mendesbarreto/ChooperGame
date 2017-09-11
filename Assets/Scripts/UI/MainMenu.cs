@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public sealed class MainMenu : MonoBehaviour {
 
-  
-
     public Button Play
     {
         get { return play; }
@@ -15,7 +13,6 @@ public sealed class MainMenu : MonoBehaviour {
     }
     [SerializeField]
     private Button play;
-
 
     public Button Code
     {
@@ -49,11 +46,10 @@ public sealed class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("SelectLevel");
     }
 
-
     public void CodePress()
     {
+        //coming soon
     }
-
 
     public void QuitPress()
     {
