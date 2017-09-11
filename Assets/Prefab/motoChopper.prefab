@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 235053212233147178}
   - component: {fileID: 60250228329659606}
   - component: {fileID: 114602174755733566}
+  - component: {fileID: 60481060835142106}
+  - component: {fileID: 114129227852739294}
   m_Layer: 0
   m_Name: motoChopper
   m_TagString: Player
@@ -101,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182873133192590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.728, y: -0.79, z: 0}
+  m_LocalPosition: {x: -5.92, y: -0.79, z: 0}
   m_LocalScale: {x: 0.476511, y: 0.44718033, z: 0.5365915}
   m_Children:
   - {fileID: 4266571012534010}
@@ -334,6 +336,57 @@ PolygonCollider2D:
     - - {x: 0.32, y: 0.31}
       - {x: 0.29, y: 0.29999998}
       - {x: 0.35999998, y: 0.29}
+--- !u!60 &60481060835142106
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182873133192590}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.78, y: 2.54}
+    newSize: {x: 2.88, y: 1.89}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.110370494, y: 1.3198724}
+      - {x: 0.13211337, y: 0.9982708}
+      - {x: 0.19775528, y: 0.61760104}
+      - {x: 0.046966128, y: 0.44851366}
+      - {x: -0.23527893, y: 0.17507423}
+      - {x: -0.5498401, y: -0.101370744}
+      - {x: -1.1370587, y: -0.003153374}
+      - {x: -1.1249005, y: 0.05927671}
+      - {x: -1.2580016, y: 0.187461}
+      - {x: -1.2800807, y: 0.37098193}
+      - {x: -1.1662908, y: 0.5825339}
+      - {x: -1.1599865, y: 0.82467043}
+      - {x: -1.091957, y: 1.0626687}
+      - {x: -0.6540874, y: 1.3696529}
+--- !u!114 &114129227852739294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182873133192590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d188065fdc574498ec5f3c0eb09cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectTag: Ground
+  DefeatScreen: {fileID: 0}
 --- !u!114 &114602174755733566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,6 +403,11 @@ MonoBehaviour:
   backWeel: {fileID: 235053212233147178}
   frontWeel: {fileID: 235199078206358578}
   playerRB: {fileID: 50964615000928990}
+  EnablePcController: 0
+  moveFront: {fileID: 0}
+  moveBack: {fileID: 0}
+  buttonDir: {fileID: 0}
+  buttonEsq: {fileID: 0}
 --- !u!212 &212249126494767450
 SpriteRenderer:
   m_ObjectHideFlags: 1

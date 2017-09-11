@@ -6,12 +6,20 @@ using UnityEngine.UI;
 
 
 public class Hud : MonoBehaviour {
-    public Button restartButton;
-
-
-    public void RestartGame()
+    public Button Menu
     {
-        SceneManager.LoadScene("Demo2");
+        get { return menu; }
+        set { menu = value; }
     }
+    [SerializeField]
+    private Button menu;
+
+
+
+    public void MenuPress()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 
 }

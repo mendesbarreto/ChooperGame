@@ -34,6 +34,15 @@ public sealed class MainMenu : MonoBehaviour {
     private Button quit;
 
 
+    private void Start()
+    {
+        LoadResources();
+    }
+
+    private void LoadResources()
+    {
+        Time.timeScale = 1.0f;
+    }
 
     public void PlayPress()
     {

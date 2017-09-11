@@ -61,7 +61,8 @@ public class SelectPlayer : MonoBehaviour {
         changePress = false;
 
         //BIKE 1 COMEÇA SETADA
-        CurrentBike = bikeFirst;     
+        CurrentBike = bikeFirst;    
+         
     }
 
 

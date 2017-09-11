@@ -37,6 +37,15 @@ public class Win : MonoBehaviour {
     private Button restartButton;
 
 
+    public Button MenuButton
+    {
+        get { return menuButton; }
+        set { menuButton = value; }
+    }
+    [SerializeField]
+    private Button menuButton;
+
+
     private void Start()
     {
         WinScreen.enabled = false;
@@ -57,6 +66,7 @@ public class Win : MonoBehaviour {
                 PlayerPrefs.SetInt("Levels " + (LevelNumber + 1), LevelControlers.instance._levels[LevelNumber + 1]);
             }
             Time.timeScale = 0.0f;
+            menuButton.enabled = false;
             WinScreen.enabled = true;
         }	
 
