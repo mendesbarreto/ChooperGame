@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Death : MonoBehaviour {
+public sealed class Death : MonoBehaviour {
 
     [SerializeField]
     private string objectTag;
@@ -10,13 +10,9 @@ public class Death : MonoBehaviour {
     [SerializeField]
     private Canvas DefeatScreen;
 
-
     private void Start()
     {
         LoadResources();
-
-       
-
     }
 
 
@@ -26,15 +22,12 @@ public class Death : MonoBehaviour {
         Time.timeScale = 1.0f;
     }
 
-
-
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == objectTag)
         {
             Time.timeScale = 0.0f;
             DefeatScreen.enabled = true;
         }
-
     }
 }

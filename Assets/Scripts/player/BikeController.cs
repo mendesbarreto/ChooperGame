@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class BikeController : MonoBehaviour {
+public sealed class BikeController : MonoBehaviour {
 
     //PROPRIEDADES
     [SerializeField]
-    private float speed = 3000;
+    private const float speed = 3000;
     [SerializeField]
-    private float rotationSpeed = 400f;
+    private const float rotationSpeed = 400f;
     [SerializeField]
     private WheelJoint2D backWeel;
     [SerializeField]
@@ -21,7 +21,7 @@ public class BikeController : MonoBehaviour {
     private float rotation = 0f;
 
 
-    //CONTROLE
+    //MUDAR CONTROLE
     [SerializeField]
     private bool EnablePcController;
 
@@ -65,13 +65,8 @@ public class BikeController : MonoBehaviour {
 
     private void Start()
     {
-        componentFront = moveFront.GetComponent<PlayerController>();
-        componentBack = moveBack.GetComponent<PlayerController>();
-        componentDir = buttonDir.GetComponent<PlayerController>();
-        componentEsq = buttonEsq.GetComponent<PlayerController>();
+        LoadResources(); 
     }
-
-
 
     private void Update()
     {
@@ -83,9 +78,20 @@ public class BikeController : MonoBehaviour {
         {
             MobileController();
         }
-        }
+    }
 
+    private void FixedUpdate()
+    {
+        Motor();
+    }
 
+    private void LoadResources()
+    {
+        componentFront = moveFront.GetComponent<PlayerController>();
+        componentBack = moveBack.GetComponent<PlayerController>();
+        componentDir = buttonDir.GetComponent<PlayerController>();
+        componentEsq = buttonEsq.GetComponent<PlayerController>();
+    }
 
     private void PcController()
     {
@@ -93,46 +99,34 @@ public class BikeController : MonoBehaviour {
         rotation = Input.GetAxisRaw("Horizontal");
     }
 
-
-
     private void MobileController()
     {
-
-        if (componentFront.input == 1)
+        if (componentFront.Input == 1)
         {
             movement = -1 * speed;
-        }
-        else if (componentBack.input == 1)
+        } else if (componentBack.Input == 1)
         {
             movement = 1 * speed;
-        }
-        else
+        } else
         {
             movement = 0f;
         }
 
-
-        if (componentDir.input == 1)
+        if (componentDir.Input == 1)
         {
             rotation = 1;
-        }
-        else if (componentEsq.input == 1)
+        } else if (componentEsq.Input == 1)
         {
             rotation = -1;
-        }
-        else
+        } else
         {
             rotation = 0f;
         }
-        
-
     }
 
-
-
-    private void FixedUpdate()
+    private void Motor()
     {
-        if(movement == 0f)
+        if (movement == 0f)
         {
             backWeel.useMotor = false;
             frontWeel.useMotor = false;
@@ -145,11 +139,7 @@ public class BikeController : MonoBehaviour {
             backWeel.motor = motor;
             frontWeel.motor = motor;
         }
-
-
         playerRB.AddTorque(-rotation * rotationSpeed * Time.fixedDeltaTime);
-
-
     }
 
 }

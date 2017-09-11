@@ -3,34 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+
+public sealed class PlayerController : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
 
-
-    public float input;
-    public float sensitility = 50;
-    bool pressing;
-
+    public float Input
+    {
+        get { return input; }
+        set { input = value; }
+    }
+    private float input;
+    private const float sensitility = 50;
+    private bool pressing;
 
     public void OnPointerDown(PointerEventData eventData)
     {
         pressing = true;
     }
+
     public void OnPointerUp(PointerEventData eventData)
     {
         pressing = false;
     }
 
-
-
-
     private void FixedUpdate()
+    {
+        DetectTouch();
+    }
+
+    private void DetectTouch()
     {
         if (pressing)
         {
-
             input += Time.deltaTime * sensitility;
-
         }
         else
         {

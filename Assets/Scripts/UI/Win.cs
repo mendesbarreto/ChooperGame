@@ -60,10 +60,10 @@ public class Win : MonoBehaviour {
 	
         if (Player.transform.position.x >=WinPosition)
         {
-            if (LevelControlers.instance.levels[LevelNumber + 1] == 0 && LevelNumber < 12)
+            if (LevelControlers.instance.Levels[LevelNumber + 1] == 0 && LevelNumber < 12)
             {
-                LevelControlers.instance.levels[LevelNumber + 1] = 1;
-                PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.levels[LevelNumber + 1]);
+                LevelControlers.instance.Levels[LevelNumber + 1] = 1;
+                PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.Levels[LevelNumber + 1]);
             }
             Time.timeScale = 0.0f;
             menuButton.enabled = false;

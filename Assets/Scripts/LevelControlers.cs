@@ -11,7 +11,7 @@ public class LevelControlers : MonoBehaviour {
         set { levels = value; }
     }
     [SerializeField]
-    public int[] levels = new int[12];
+    private int[] levels = new int[12];
 
 
     public string LevelsKey 
@@ -19,7 +19,7 @@ public class LevelControlers : MonoBehaviour {
         get { return levelsKey;}
     }
     [SerializeField]
-    private const string levelsKey = "Levels ";
+    private static string levelsKey = "Levels ";
 
     public static LevelControlers instance;
 
