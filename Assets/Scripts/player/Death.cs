@@ -10,6 +10,9 @@ public sealed class Death : MonoBehaviour {
     [SerializeField]
     private Canvas DefeatScreen;
 
+
+
+
     private void Start()
     {
         LoadResources();
@@ -28,6 +31,7 @@ public sealed class Death : MonoBehaviour {
         {
             Time.timeScale = 0.0f;
             DefeatScreen.enabled = true;
+    
         }
     }
 }

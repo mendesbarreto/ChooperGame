@@ -81,6 +81,8 @@ public sealed class Win : MonoBehaviour {
         Time.timeScale = 0.0f;
         menuButton.enabled = false;
         WinScreen.enabled = true;
+
+
     }
 
     public void ContinueGame()
