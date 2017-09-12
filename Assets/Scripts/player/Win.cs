@@ -6,13 +6,10 @@ using UnityEngine.UI;
 
 public sealed class Win : MonoBehaviour {
 
-    public GameObject Player
-    {
-        get { return player; }
-        set { player = value; }
-    }
     [SerializeField]
-    private GameObject player;
+    private string objectTag;
+
+    private GameObject objPlayer;
 
     [SerializeField]
     private Canvas WinScreen;
@@ -57,6 +54,7 @@ public sealed class Win : MonoBehaviour {
         WinScreen.enabled = false;
         continueButton = continueButton.GetComponent<Button>();
         restartButton = restartButton.GetComponent<Button>();
+        objPlayer = GameObject.FindWithTag(objectTag);
         Time.timeScale = 1.0f;
     }
 
@@ -67,7 +65,7 @@ public sealed class Win : MonoBehaviour {
 
     private void VerifyPlayerPosition()
     {
-        if (player.transform.position.x >= WinPosition)
+        if (objPlayer.transform.position.x >= WinPosition)
         {
             WhenPlayerWin();
         }

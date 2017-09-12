@@ -12,8 +12,17 @@ public sealed class CameraFollow : MonoBehaviour {
     private float maxY;
     [SerializeField]
     private float minY;
+
     [SerializeField]
-    private Transform player;
+    private string objectTag;
+
+    private GameObject objPlayer;
+
+    private void Start()
+    {
+        objPlayer = GameObject.FindWithTag(objectTag);
+    }
+
 
     private void Update()
     {
@@ -22,7 +31,7 @@ public sealed class CameraFollow : MonoBehaviour {
 
     private void MoveCamera()
     {
-        transform.position = new Vector3(Mathf.Clamp(player.position.x, minX, maxX), Mathf.Clamp(player.position.y, minY, maxY), transform.position.z);
+        transform.position = new Vector3(Mathf.Clamp(objPlayer.transform.position.x, minX, maxX), Mathf.Clamp(objPlayer.transform.position.y, minY, maxY), transform.position.z);
     }
 
 }
