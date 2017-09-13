@@ -11,8 +11,6 @@ public sealed class Death : MonoBehaviour {
     private Canvas DefeatScreen;
 
 
-
-
     private void Start()
     {
         LoadResources();
