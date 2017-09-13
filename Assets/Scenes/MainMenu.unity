@@ -1955,7 +1955,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.28058332}
   m_AnchorMax: {x: 0.24375, y: 0.37958333}
-  m_AnchoredPosition: {x: -569.0001, y: 4.199997}
+  m_AnchoredPosition: {x: -569.00024, y: 4.200012}
   m_SizeDelta: {x: 131.35, y: -8.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006948012
@@ -2143,8 +2143,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2044305573}
   - component: {fileID: 2044305572}
+  - component: {fileID: 2044305574}
   m_Layer: 0
-  m_Name: LevelControler
+  m_Name: GameControler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2175,6 +2176,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2044305574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2044305571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a075e5cd04a1541b2d8ae7a7ec1d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerList: 000000000100000002000000
 --- !u!1 &2138000854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2282,7 +2295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.033}
   m_AnchorMax: {x: 0.90749997, y: 0.123}
-  m_AnchoredPosition: {x: -1079.0001, y: 1}
+  m_AnchoredPosition: {x: -1079, y: 1}
   m_SizeDelta: {x: 26.700012, y: -8.299999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144447111

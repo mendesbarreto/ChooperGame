@@ -57,7 +57,9 @@ public sealed class SelectPlayer : MonoBehaviour {
     {
         changePress = false;
         //BIKE 1 COMEÇA SETADA
-        CurrentBike = bikeFirst;    
+        CurrentBike = bikeFirst;
+        MainGame.instance.CurrentObject = 0; //RED
+          
     }
 
     public void ChangePress()
@@ -80,15 +82,18 @@ public sealed class SelectPlayer : MonoBehaviour {
     {
         if (CurrentBike == bikeFirst)
         {
-            CurrentBike = bikeSecond;   
+            CurrentBike = bikeSecond;
+            MainGame.instance.CurrentObject = 1; //YELLOW
         }
         else if (CurrentBike == bikeSecond)
         {
             CurrentBike = bikeThird;
+            MainGame.instance.CurrentObject = 2; //BLUE
         }
         else
         {
-            CurrentBike = bikeFirst;   
+            CurrentBike = bikeFirst;
+            MainGame.instance.CurrentObject = 0; //RED 
         }
     }
 
