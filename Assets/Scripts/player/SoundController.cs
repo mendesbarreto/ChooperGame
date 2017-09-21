@@ -8,6 +8,36 @@ public sealed class SoundController : MonoBehaviour {
     private AudioSource som;
     private const float acceleration = 0.01f;
 
+    private PlayerController componentFront;
+    private PlayerController componentBack;
+
+
+    public GameObject MoveFront
+    {
+        get { return moveFront; }
+        set { moveFront = value; }
+    }
+    [SerializeField]
+    private GameObject moveFront;
+
+    public GameObject MoveBack
+    {
+        get { return moveBack; }
+        set { moveBack = value; }
+    }
+    [SerializeField]
+    private GameObject moveBack;
+
+    private void Start()
+    {
+        LoadResources();
+    }
+
+    private void LoadResources()
+    {
+        componentFront = moveFront.GetComponent<PlayerController>();
+        componentBack = moveBack.GetComponent<PlayerController>();
+    }
 
     private void Update ()
     {
@@ -17,7 +47,7 @@ public sealed class SoundController : MonoBehaviour {
 
     private void MotorSound()
     {
-        if (Input.GetAxisRaw("Vertical") != 0 && som.pitch < 3)
+        if (Input.GetAxisRaw("Vertical") != 0 || componentFront.Input == 1 || componentBack.Input == 1 && som.pitch < 3)
         {
             som.pitch = som.pitch + acceleration;
         }

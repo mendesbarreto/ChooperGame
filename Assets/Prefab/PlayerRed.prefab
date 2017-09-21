@@ -353,7 +353,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a88b096fba7c3bf43a8ecf7100c60da0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   backWeel: {fileID: 235137780639329128}
   frontWeel: {fileID: 235205105133986960}
   playerRB: {fileID: 50552048213235612}
-  EnablePcController: 1
+  EnablePcController: 0
   moveFront: {fileID: 0}
   moveBack: {fileID: 0}
   buttonDir: {fileID: 0}
@@ -467,6 +467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   som: {fileID: 82923335733121388}
+  moveFront: {fileID: 0}
+  moveBack: {fileID: 0}
 --- !u!212 &212020248063921714
 SpriteRenderer:
   m_ObjectHideFlags: 1
