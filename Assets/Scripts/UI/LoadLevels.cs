@@ -31,7 +31,7 @@ public sealed class LoadLevels : MonoBehaviour {
         set { level = value; }
     }
     [SerializeField]
-    private Button[] level = new Button[12];
+    private Button[] level = new Button[10];
 
 
 
@@ -78,13 +78,6 @@ public sealed class LoadLevels : MonoBehaviour {
     {
         SceneManager.LoadScene("L10");
     }
-    public void L11Press()
-    {
-        SceneManager.LoadScene("L11");
-    }
-    public void L12Press()
-    {
-        SceneManager.LoadScene("L12");
-    }
+
 
 }
