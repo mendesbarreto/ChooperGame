@@ -30,7 +30,7 @@ public sealed class SelectPlayer : MonoBehaviour {
     [SerializeField]
     private GameObject bikeThird;
 
-    private GameObject CurrentBike;
+    private GameObject currentBike;
 
     //UI
     public Button Change
@@ -42,8 +42,8 @@ public sealed class SelectPlayer : MonoBehaviour {
     private Button change;
 
     //PROPRIEDADES
-    private Vector3 ShowBike = new Vector3(4, -0.76f, 86);
-    private Vector3 HiddenBike = new Vector3(15, -0.76f, 86);
+    private Vector3 showBike = new Vector3(4, -0.76f, 86);
+    private Vector3 hiddenBike = new Vector3(15, -0.76f, 86);
     private bool changePress;
     [SerializeField]
     private float speedTranslate;
@@ -57,7 +57,7 @@ public sealed class SelectPlayer : MonoBehaviour {
     {
         changePress = false;
         //BIKE 1 COMEÇA SETADA
-        CurrentBike = bikeFirst;
+        currentBike = bikeFirst;
         MainGame.instance.CurrentObject = 0; //RED
           
     }
@@ -80,19 +80,19 @@ public sealed class SelectPlayer : MonoBehaviour {
     //AQUI VAI DECIDIR QUAL BIKE FICA 
     private void ChangeBike()
     {
-        if (CurrentBike == bikeFirst)
+        if (currentBike == bikeFirst)
         {
-            CurrentBike = bikeSecond;
+            currentBike = bikeSecond;
             MainGame.instance.CurrentObject = 1; //YELLOW
         }
-        else if (CurrentBike == bikeSecond)
+        else if (currentBike == bikeSecond)
         {
-            CurrentBike = bikeThird;
+            currentBike = bikeThird;
             MainGame.instance.CurrentObject = 2; //BLUE
         }
         else
         {
-            CurrentBike = bikeFirst;
+            currentBike = bikeFirst;
             MainGame.instance.CurrentObject = 0; //RED 
         }
     }
@@ -100,11 +100,11 @@ public sealed class SelectPlayer : MonoBehaviour {
    //VERIFICA BIKE SETADA
     private GameObject VerifyBike()
     {
-        if (CurrentBike == bikeFirst)
+        if (currentBike == bikeFirst)
         {  
             return bikeFirst;
         }
-        else if (CurrentBike == bikeSecond)
+        else if (currentBike == bikeSecond)
         {
             return bikeSecond;
         }
@@ -119,7 +119,7 @@ public sealed class SelectPlayer : MonoBehaviour {
     //MOVE PARA O PAINEL
     private void MoveMainBike(GameObject mainBike)
     {
-        mainBike.transform.position = Vector3.Lerp(mainBike.transform.position, ShowBike, speedTranslate * Time.deltaTime);
+        mainBike.transform.position = Vector3.Lerp(mainBike.transform.position, showBike, speedTranslate * Time.deltaTime);
         ReturnPosition(mainBike);
     }
 
@@ -128,15 +128,15 @@ public sealed class SelectPlayer : MonoBehaviour {
     {
         if (mainBike != bikeFirst)
         {
-            bikeFirst.transform.position = Vector3.Lerp(bikeFirst.transform.position, HiddenBike, speedTranslate * Time.deltaTime);
+            bikeFirst.transform.position = Vector3.Lerp(bikeFirst.transform.position, hiddenBike, speedTranslate * Time.deltaTime);
         }
         if (mainBike != bikeSecond)
         {
-            bikeSecond.transform.position = Vector3.Lerp(bikeSecond.transform.position, HiddenBike, speedTranslate * Time.deltaTime);
+            bikeSecond.transform.position = Vector3.Lerp(bikeSecond.transform.position, hiddenBike, speedTranslate * Time.deltaTime);
         }
         if (mainBike != bikeThird)
         {
-            bikeThird.transform.position = Vector3.Lerp(bikeThird.transform.position, HiddenBike, speedTranslate * Time.deltaTime);
+            bikeThird.transform.position = Vector3.Lerp(bikeThird.transform.position, hiddenBike, speedTranslate * Time.deltaTime);
         }
     }
 

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Night DEMO.unity
     guid: cd6f4d6b9df3b2b4f989c42284298236
   - enabled: 1
+    path: Assets/Scenes/SplashScreen.unity
+    guid: 49c267ee9ce861a44af3289035e93d8c
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e692db402212fe941818eac816f50ab8
   - enabled: 1

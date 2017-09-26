@@ -37,7 +37,7 @@ public sealed class MainMenu : MonoBehaviour {
     [SerializeField]
     private Button quit;
 
-
+    private const string NameSceneSelectLevel = "SelectLevel";
 
     private void Start()
     {
@@ -84,7 +84,7 @@ public sealed class MainMenu : MonoBehaviour {
 
     public void PlayPress()
     {
-        SceneManager.LoadScene("SelectLevel");
+        SceneManager.LoadScene(NameSceneSelectLevel);
     }
 
     public void CodePress()

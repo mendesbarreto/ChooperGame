@@ -44,6 +44,8 @@ public sealed class Win : MonoBehaviour {
     [SerializeField]
     private Button menuButton;
 
+    private const int levelNumber = 10;
+
     private void Start()
     {
         LoadResources();
@@ -55,7 +57,7 @@ public sealed class Win : MonoBehaviour {
         continueButton = continueButton.GetComponent<Button>();
         restartButton = restartButton.GetComponent<Button>();
         objPlayer = GameObject.FindWithTag(objectTag);
-        Time.timeScale = 1.0f;
+       
     }
 
      private void Update ()
@@ -73,7 +75,7 @@ public sealed class Win : MonoBehaviour {
 
     private void WhenPlayerWin()
     {
-        if (LevelControlers.instance.Levels[LevelNumber + 1] == 0 && LevelNumber < 12)
+        if (LevelControlers.instance.Levels[LevelNumber + 1] == 0 && LevelNumber < levelNumber)
         {
             LevelControlers.instance.Levels[LevelNumber + 1] = 1;
             PlayerPrefs.SetInt(LevelControlers.instance.LevelsKey + (LevelNumber + 1), LevelControlers.instance.Levels[LevelNumber + 1]);

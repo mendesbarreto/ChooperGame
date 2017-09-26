@@ -5863,6 +5863,11 @@ Prefab:
       propertyPath: EnablePcController
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114282182954562478, guid: 4fcab60813db7604f97c95fea4a1e704,
+        type: 2}
+      propertyPath: defeatScreen
+      value: 
+      objectReference: {fileID: 1939988879}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4fcab60813db7604f97c95fea4a1e704, type: 2}
   m_IsPrefabParent: 0
@@ -11108,7 +11113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7912505, y: 0.84900004}
   m_AnchorMax: {x: 1, y: 0.9725835}
-  m_AnchoredPosition: {x: 160.50003, y: 4.9999847}
+  m_AnchoredPosition: {x: 160.5, y: 4.9999847}
   m_SizeDelta: {x: 322.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1222643045
@@ -13652,6 +13657,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114222189028141798, guid: 8be1c8b0e13f4664992f9766730afe42,
+        type: 2}
+      propertyPath: defeatScreen
+      value: 
+      objectReference: {fileID: 1939988879}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8be1c8b0e13f4664992f9766730afe42, type: 2}
   m_IsPrefabParent: 0
@@ -14779,6 +14789,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114290087567524842, guid: 18f99f64bfd8a174a8fbc24221b493f8,
+        type: 2}
+      propertyPath: defeatScreen
+      value: 
+      objectReference: {fileID: 1939988879}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18f99f64bfd8a174a8fbc24221b493f8, type: 2}
   m_IsPrefabParent: 0
