@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public sealed class MainMenu : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject codeScreen;
+
+    [SerializeField]
+    public Image imgLock;
+
+
     public Button Play
     {
         get { return play; }
@@ -31,6 +38,7 @@ public sealed class MainMenu : MonoBehaviour {
     private Button quit;
 
 
+
     private void Start()
     {
         LoadResources();
@@ -39,6 +47,39 @@ public sealed class MainMenu : MonoBehaviour {
     private void LoadResources()
     {
         Time.timeScale = 1.0f;
+
+        if (MainGame.instance.GameStats == 1)
+        {
+            imgLock.enabled = false;
+            play.enabled = true;
+        }
+        else
+        {
+            imgLock.enabled = true;
+            play.enabled = false;
+        }
+
+    }
+
+    private void Update()
+    {
+        if (codeScreen.activeInHierarchy == false)
+        {
+            quit.enabled = true;
+
+            code.enabled = true;
+
+            VerifyUnlock();
+        }
+    }
+
+    private void VerifyUnlock()
+    {
+        if (MainGame.instance.GameStats == 1)
+        {
+            imgLock.enabled = false;
+            Play.enabled = true;
+        }
     }
 
     public void PlayPress()
@@ -48,12 +89,14 @@ public sealed class MainMenu : MonoBehaviour {
 
     public void CodePress()
     {
-        //coming soon
+        codeScreen.SetActive(true);
+        quit.enabled = false;
+        code.enabled = false;
+        play.enabled = false;
     }
 
     public void QuitPress()
     {
         Application.Quit();
     }
-
 }
