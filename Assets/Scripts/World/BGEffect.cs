@@ -20,7 +20,7 @@ public sealed class BGEffect : MonoBehaviour {
 
     private void MoveBG()
     {
-        transform.position = new Vector2(moveInX + (-Camera.transform.position.x / speedCenario), moveInY + ((-Camera.transform.position.y / speedCenario)));
+        transform.position = new Vector2(moveInX + (-Camera.transform.position.x / speedCenario), moveInY + (-Camera.transform.position.y / speedCenario));
     }
 
 

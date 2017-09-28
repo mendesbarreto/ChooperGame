@@ -42,8 +42,8 @@ public sealed class SelectPlayer : MonoBehaviour {
     private Button change;
 
     //PROPRIEDADES
-    private Vector3 showBike = new Vector3(4, -0.76f, 86);
-    private Vector3 hiddenBike = new Vector3(15, -0.76f, 86);
+    private readonly Vector3 showBike = new Vector3(4, -0.76f, 86);
+    private readonly Vector3 hiddenBike = new Vector3(15, -0.76f, 86);
     private bool changePress;
     [SerializeField]
     private float speedTranslate;

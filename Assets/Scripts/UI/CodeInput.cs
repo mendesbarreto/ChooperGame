@@ -41,6 +41,8 @@ public class CodeInput : MonoBehaviour {
     [SerializeField]
     private Text txtIncorreto;
 
+    private const string unlockCode = "xj917b2t8";
+
 
     private void Start()
     {
@@ -63,7 +65,7 @@ public class CodeInput : MonoBehaviour {
             txtIncorreto.text = "RESET - ESTADO: " + MainGame.instance.GameStats;
 
         }
-        else if (code.text == "bstoys")
+        else if (code.text == unlockCode)
         {
             MainGame.instance.GameStats = 1;
             code.text = "";

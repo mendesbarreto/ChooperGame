@@ -10,7 +10,7 @@ public sealed class MainMenu : MonoBehaviour {
     private GameObject codeScreen;
 
     [SerializeField]
-    public Image imgLock;
+    private Image imgLock;
 
 
     public Button Play

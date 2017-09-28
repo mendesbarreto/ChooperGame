@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SplashScreen : MonoBehaviour {
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
 
         StartCoroutine("Countdown");
