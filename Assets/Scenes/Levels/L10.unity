@@ -11113,7 +11113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7912505, y: 0.84900004}
   m_AnchorMax: {x: 1, y: 0.9725835}
-  m_AnchoredPosition: {x: 160.5, y: 4.9999847}
+  m_AnchoredPosition: {x: 160.50003, y: 4.9999847}
   m_SizeDelta: {x: 322.5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &1222643045
@@ -19391,7 +19391,7 @@ Prefab:
     - target: {fileID: 212503810635448870, guid: 1bf769d16aa0b8e4ab4e65951cc5082b,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4099562682589544, guid: 1bf769d16aa0b8e4ab4e65951cc5082b, type: 2}
       propertyPath: m_LocalScale.x
@@ -19412,7 +19412,7 @@ Prefab:
     - target: {fileID: 212321852757666096, guid: 1bf769d16aa0b8e4ab4e65951cc5082b,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bf769d16aa0b8e4ab4e65951cc5082b, type: 2}
