@@ -143,7 +143,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.BSToys.BSChopper
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
