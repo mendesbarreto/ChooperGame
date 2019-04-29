@@ -7,7 +7,7 @@ public sealed class BikeController : MonoBehaviour {
 
     //PROPRIEDADES
     [SerializeField]
-    private const float speed = 3000;
+    private float speed = 3000;
     [SerializeField]
     private const float rotationSpeed = 400f;
     [SerializeField]

@@ -10,6 +10,8 @@ public sealed class BGEffect : MonoBehaviour {
     [SerializeField]
     private float speedCenario;
 
+    private const float moveInX = -21.8f;
+    private const float moveInY = -0.4846725f;
 
     private void Update()
     {
@@ -18,7 +20,7 @@ public sealed class BGEffect : MonoBehaviour {
 
     private void MoveBG()
     {
-        transform.position = new Vector2(-21.8f + (-Camera.transform.position.x / speedCenario), -0.4846725f + ((-Camera.transform.position.y / speedCenario)));
+        transform.position = new Vector2(moveInX + (-Camera.transform.position.x / speedCenario), moveInY + (-Camera.transform.position.y / speedCenario));
     }
 
 

@@ -143,7 +143,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.BSToys.BSChopper
   buildNumber: {}
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -217,8 +217,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Gustavo/Desktop/FATEC-IGDS/Unity 3D/IGDSorocabaProjects/ChooperGame/userKeystore.keystore
+  AndroidKeyaliasName: bschopper
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   androidEnableBanner: 1
@@ -232,7 +232,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: ae36b49e2bb05f848b41012d79663605, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []

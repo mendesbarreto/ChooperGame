@@ -8,7 +8,8 @@ public sealed class Death : MonoBehaviour {
     private string objectTag;
 
     [SerializeField]
-    private Canvas DefeatScreen;
+    private Canvas defeatScreen;
+
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public sealed class Death : MonoBehaviour {
 
     private void LoadResources()
     {
-        DefeatScreen.enabled = false;
+        defeatScreen.enabled = false;
         Time.timeScale = 1.0f;
     }
 
@@ -27,7 +28,8 @@ public sealed class Death : MonoBehaviour {
         if (collision.gameObject.tag == objectTag)
         {
             Time.timeScale = 0.0f;
-            DefeatScreen.enabled = true;
+            defeatScreen.enabled = true;
+    
         }
     }
 }

@@ -9,6 +9,9 @@ public sealed class MoveMapTouch : MonoBehaviour {
     private Vector3 limiteRight = new Vector3(-1,0,0);
     private Vector3 limiteLeft = new Vector3(-19,0,0);
 
+    private const float maxLimiteR = 0f;
+    private const float maxLimiteL = -20;
+
     private void Update()
     {
         MoveMap();
@@ -16,11 +19,11 @@ public sealed class MoveMapTouch : MonoBehaviour {
 
     private void MoveMap()
     {
-        if (transform.position.x > 0f)
+        if (transform.position.x > maxLimiteR)
         {
             transform.position = Vector3.Lerp(transform.position, limiteRight, Time.deltaTime);
 
-        } else if (transform.position.x < -20)
+        } else if (transform.position.x < maxLimiteL)
         {
             transform.position = Vector3.Lerp(transform.position, limiteLeft, Time.deltaTime);
 

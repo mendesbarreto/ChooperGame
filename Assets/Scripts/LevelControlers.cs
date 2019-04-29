@@ -11,7 +11,7 @@ public class LevelControlers : MonoBehaviour {
         set { levels = value; }
     }
     [SerializeField]
-    private int[] levels = new int[12];
+    private int[] levels = new int[10];
 
 
     public string LevelsKey 
@@ -42,7 +42,7 @@ public class LevelControlers : MonoBehaviour {
         levels[0] = 1;
 
 
-        for (int i = 0; i < 12; i++)
+        for (int i = 0; i < 10; i++)
         {
 
             // PARA CADA FASE

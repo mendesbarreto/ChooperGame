@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: 9f6288e58d11a58459cba006a4377016
+timeCreated: 1505760668
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "objetos padr\xE3o_0"
+    21300002: "objetos padr\xE3o_1"
+    21300004: "objetos padr\xE3o_2"
+    21300006: "objetos padr\xE3o_3"
+    21300008: "objetos padr\xE3o_4"
+    21300010: "objetos padr\xE3o_5"
+    21300012: "objetos padr\xE3o_6"
+    21300014: "objetos padr\xE3o_7"
+    21300016: "objetos padr\xE3o_8"
+    21300018: "objetos padr\xE3o_9"
+    21300020: "objetos padr\xE3o_10"
+    21300022: "objetos padr\xE3o_11"
+    21300024: "objetos padr\xE3o_12"
+    21300026: "objetos padr\xE3o_13"
+    21300028: "objetos padr\xE3o_14"
+    21300030: "objetos padr\xE3o_15"
+    21300032: "objetos padr\xE3o_16"
+    21300034: "objetos padr\xE3o_17"
+    21300036: "objetos padr\xE3o_18"
+    21300038: "objetos padr\xE3o_19"
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_0"
+      rect:
+        serializedVersion: 2
+        x: 4193
+        y: 5606
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_1"
+      rect:
+        serializedVersion: 2
+        x: 3867
+        y: 3399
+        width: 2162
+        height: 2156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_2"
+      rect:
+        serializedVersion: 2
+        x: 7739
+        y: 3917
+        width: 3403
+        height: 1147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_3"
+      rect:
+        serializedVersion: 2
+        x: 9019
+        y: 5048
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_4"
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 4109
+        width: 114
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_5"
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 3989
+        width: 401
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_6"
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 2543
+        width: 2174
+        height: 1551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_7"
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 4091
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_8"
+      rect:
+        serializedVersion: 2
+        x: 5934
+        y: 2692
+        width: 1172
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_9"
+      rect:
+        serializedVersion: 2
+        x: 8191
+        y: 2728
+        width: 2276
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_10"
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1454
+        width: 607
+        height: 771
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_11"
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 1819
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_12"
+      rect:
+        serializedVersion: 2
+        x: 3591
+        y: 1087
+        width: 448
+        height: 892
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_13"
+      rect:
+        serializedVersion: 2
+        x: 7808
+        y: 1554
+        width: 544
+        height: 617
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_14"
+      rect:
+        serializedVersion: 2
+        x: 9731
+        y: 1519
+        width: 727
+        height: 589
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_15"
+      rect:
+        serializedVersion: 2
+        x: 11246
+        y: 1429
+        width: 647
+        height: 751
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_16"
+      rect:
+        serializedVersion: 2
+        x: 6047
+        y: 662
+        width: 572
+        height: 897
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_17"
+      rect:
+        serializedVersion: 2
+        x: 7847
+        y: 507
+        width: 503
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: "objetos padr\xE3o_18"
+      rect:
+        serializedVersion: 2
+        x: 9904
+        y: 423
+        width: 287
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

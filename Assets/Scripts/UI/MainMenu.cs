@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 
 public sealed class MainMenu : MonoBehaviour {
 
+    [SerializeField]
+    private GameObject codeScreen;
+
+    [SerializeField]
+    private Image imgLock;
+
+
     public Button Play
     {
         get { return play; }
@@ -30,6 +37,7 @@ public sealed class MainMenu : MonoBehaviour {
     [SerializeField]
     private Button quit;
 
+    private const string NameSceneSelectLevel = "SelectLevel";
 
     private void Start()
     {
@@ -39,21 +47,56 @@ public sealed class MainMenu : MonoBehaviour {
     private void LoadResources()
     {
         Time.timeScale = 1.0f;
+
+        if (MainGame.instance.GameStats == 1)
+        {
+            imgLock.enabled = false;
+            play.enabled = true;
+        }
+        else
+        {
+            imgLock.enabled = true;
+            play.enabled = false;
+        }
+
+    }
+
+    private void Update()
+    {
+        if (codeScreen.activeInHierarchy == false)
+        {
+            quit.enabled = true;
+
+            code.enabled = true;
+
+            VerifyUnlock();
+        }
+    }
+
+    private void VerifyUnlock()
+    {
+        if (MainGame.instance.GameStats == 1)
+        {
+            imgLock.enabled = false;
+            Play.enabled = true;
+        }
     }
 
     public void PlayPress()
     {
-        SceneManager.LoadScene("SelectLevel");
+        SceneManager.LoadScene(NameSceneSelectLevel);
     }
 
     public void CodePress()
     {
-        //coming soon
+        codeScreen.SetActive(true);
+        quit.enabled = false;
+        code.enabled = false;
+        play.enabled = false;
     }
 
     public void QuitPress()
     {
         Application.Quit();
     }
-
 }

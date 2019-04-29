@@ -9,12 +9,15 @@ public sealed class SecretPassage : MonoBehaviour {
     [SerializeField]
     private ParticleSystem BrokeEffect;
 
-    
-    void OnTriggerEnter2D(Collider2D collision)
+    private const string explosionAct = "ExplosionAct";
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == objectTag)
         {
-            StartCoroutine("ExplosionAct");
+            StartCoroutine(explosionAct);
         }
     }
     
